@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestFirefox</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 28 17:48:33 IST 2017</td>
+<td>Started on:</td><td>Sun Oct 29 10:08:52 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>101 seconds (101133 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17001 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td></td>
+<td>Included groups:</td><td>login </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -76,61 +76,25 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='scripts.ValidLogin.testValidLogin()'><b>testValidLogin</b><br>Test class: scripts.ValidLogin</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //form[contains(@action,&apos;logout.php&apos;)]/..
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T16:15:40.131Z&apos;
-System info: host: &apos;MUNI-VAIO&apos;, ip: &apos;192.168.2.8&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=C:\Users\MUNI\AppData\Local\Temp\rust_mozprofile.0i5nLk6Z0QWd, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=54.0, platformVersion=6.1, moz:processID=10188, browserName=firefox, javascriptEnabled=true, platformName=XP}]
-Session ID: 5cb8d5f8-2cca-424b-a615-6a4576c989d1
-*** Element info: {Using=xpath, value=//form[contains(@action,&apos;logout.php&apos;)]/..}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+<td><div><pre>java.lang.NullPointerException
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at page.HomePage.clickLogout(HomePage.java:42)
-	at scripts.ValidLogin.testValidLogin(ValidLogin.java:43)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at page.LoginPage.setUserName(LoginPage.java:27)
+	at generic.ApplicationSpecificLib.loginApplication(ApplicationSpecificLib.java:9)
+	at scripts.ValidLogin.testValidLogin(ValidLogin.java:23)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace888992890", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace888992890'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //form[contains(@action,&apos;logout.php&apos;)]/..
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T16:15:40.131Z&apos;
-System info: host: &apos;MUNI-VAIO&apos;, ip: &apos;192.168.2.8&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=C:\Users\MUNI\AppData\Local\Temp\rust_mozprofile.0i5nLk6Z0QWd, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=54.0, platformVersion=6.1, moz:processID=10188, browserName=firefox, javascriptEnabled=true, platformName=XP}]
-Session ID: 5cb8d5f8-2cca-424b-a615-6a4576c989d1
-*** Element info: {Using=xpath, value=//form[contains(@action,&apos;logout.php&apos;)]/..}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1965725120", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1965725120'><pre>java.lang.NullPointerException
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at page.HomePage.clickLogout(HomePage.java:42)
-	at scripts.ValidLogin.testValidLogin(ValidLogin.java:43)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at page.LoginPage.setUserName(LoginPage.java:27)
+	at generic.ApplicationSpecificLib.loginApplication(ApplicationSpecificLib.java:9)
+	at scripts.ValidLogin.testValidLogin(ValidLogin.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -152,28 +116,8 @@ Session ID: 5cb8d5f8-2cca-424b-a615-6a4576c989d1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>34</td>
-<td>scripts.ValidLogin@1e88b3c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='scripts.VerifyProfileName.testVerifyProfileName()'><b>testVerifyProfileName</b><br>Test class: scripts.VerifyProfileName<br/>
-<a href="#Output-290860432" onClick='toggleBox("Output-290860432", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-290860432" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-290860432">
-Profile Text displayed. PASS<br/>
-</div>
-</td>
-<td></td>
-<td>29</td>
-<td>scripts.VerifyProfileName@42d80b78</td></tr>
+<td>0</td>
+<td>scripts.ValidLogin@5c3bd550</td></tr>
 </table><p>
 </body>
 </html>

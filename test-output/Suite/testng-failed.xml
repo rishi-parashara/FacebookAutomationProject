@@ -2,7 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="tests">
   <test name="TestChrome(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
+    <groups>
+      <run>
+        <include name="login"/>
+      </run>
+    </groups>
     <classes>
       <class name="scripts.ValidLogin">
         <methods>
@@ -11,25 +16,6 @@
           <include name="openApplication"/>
         </methods>
       </class> <!-- scripts.ValidLogin -->
-      <class name="scripts.VerifyProfileName">
-        <methods>
-          <include name="closeApplication"/>
-          <include name="openApplication"/>
-          <include name="testVerifyProfileName"/>
-        </methods>
-      </class> <!-- scripts.VerifyProfileName -->
     </classes>
   </test> <!-- TestChrome(failed) -->
-  <test name="TestFirefox(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="scripts.ValidLogin">
-        <methods>
-          <include name="closeApplication"/>
-          <include name="testValidLogin"/>
-          <include name="openApplication"/>
-        </methods>
-      </class> <!-- scripts.ValidLogin -->
-    </classes>
-  </test> <!-- TestFirefox(failed) -->
 </suite> <!-- Failed suite [Suite] -->

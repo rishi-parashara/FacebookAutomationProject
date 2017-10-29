@@ -24,7 +24,10 @@ public class LoginPage {
 	
 	//Utilization
 	public void setUserName(String un){
+		System.out.println(un + "in utilization");
+		System.out.println("unTB");
 		unTB.sendKeys(un);
+		System.out.println(un + "in utilization");
 	}
 	
 	public void setPassword(String pw){
@@ -32,6 +35,7 @@ public class LoginPage {
 	}
 	
 	public void clickLogin(){
+		
 		loginBTN.click();
 	}
 }

@@ -21,7 +21,7 @@ public abstract class BaseTest implements IAutoConst {
 	}
 	
 	@Parameters({"browser"})
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void openApplication(String browser){
 		
 		if(browser.equals("chrome")){
@@ -44,12 +44,24 @@ public abstract class BaseTest implements IAutoConst {
 		Reporter.log("Application Opened Successfully. PASS",true);
 	}
 	
-	@AfterMethod
+//	 <test name="TestFirefox">
+//	  <parameter name="browser" value="firefox"/>
+//	    <groups>
+//	  	<run>
+//	  		<include name="login"/>
+//	  	</run>
+//	  </groups>
+//	    <packages>
+//	      <package name="scripts"/>
+//	    </packages>
+//	  </test>
+	
+	@AfterMethod(alwaysRun=true)
 	public void closeApplication(){
 		try{
 			Thread.sleep(2000);
 		}catch(Exception e){
 		}
-		driver.quit();
+		//driver.quit();
 	}
 }

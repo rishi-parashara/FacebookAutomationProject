@@ -1,13 +1,11 @@
 <suite name="Suite" parallel="tests">
   <test name="TestChrome">
-  <parameter name="browser" value="chrome"/>
-    <packages>
-      <package name="scripts"/>
-    </packages>
-  </test>
-  
-  <test name="TestFirefox">
   <parameter name="browser" value="firefox"/>
+  <groups>
+  	<run>
+  		<include name="login"/>
+  	</run>
+  </groups>
     <packages>
       <package name="scripts"/>
     </packages>
